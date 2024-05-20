@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(gofar_navigation_msgs)
+project(rasberry_coordination)
 
 # Default to C++14
 if(NOT CMAKE_CXX_STANDARD)
@@ -19,10 +19,25 @@ find_package(std_msgs REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 find_package(diagnostic_msgs REQUIRED)
 
-rosidl_generate_interfaces(gofar_navigation_msgs
-  "msg/NewAgentConfigGoFar.msg"
+rosidl_generate_interfaces(rasberry_coordination
+  "msg/AgentRegistration.msg"
+  "msg/AgentRegistrationList.msg"
+  "msg/AgentState.msg"
+  "msg/AgentStateList.msg"
+  "msg/FullLocation.msg"
+  "msg/Interruption.msg"
+  "msg/KeyValuePair.msg"
+  "msg/MarkerDetails.msg"
   "msg/Module.msg"
-
+  "msg/NewAgentConfig.msg"
+  "msg/NewAgentConfigSetup.msg"
+  "msg/ServiceQuery.msg"
+  "msg/ServiceResponse.msg"
+  "msg/TaskDetails.msg"
+  "msg/TasksDetails.msg"
+  "msg/TopoLocation.msg"
+  "msg/ModuleGF.msg"
+  "msg/NewAgentConfigGF"
   DEPENDENCIES builtin_interfaces sensor_msgs geometry_msgs std_msgs diagnostic_msgs
 )
 
