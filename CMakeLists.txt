@@ -17,7 +17,6 @@ find_package(sensor_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
-find_package(diagnostic_msgs REQUIRED)
 
 rosidl_generate_interfaces(rasberry_coordination
   "msg/AgentRegistration.msg"
@@ -36,9 +35,7 @@ rosidl_generate_interfaces(rasberry_coordination
   "msg/TaskDetails.msg"
   "msg/TasksDetails.msg"
   "msg/TopoLocation.msg"
-  "msg/ModuleGF.msg"
-  "msg/NewAgentConfigGF"
-  DEPENDENCIES builtin_interfaces sensor_msgs geometry_msgs std_msgs diagnostic_msgs
+  DEPENDENCIES builtin_interfaces sensor_msgs geometry_msgs std_msgs
 )
 
 ament_package()
